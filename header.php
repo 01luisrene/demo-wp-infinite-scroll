@@ -7,8 +7,8 @@
 
     <title>Demo Infinite Scroll</title>
     <?php
-	    //Cargar los archivos css, js ...
-	    wp_head();
-	   ?>
+    //Cargar los archivos css, js ...
+    wp_head();
+    ?>
   </head>
   <body>
