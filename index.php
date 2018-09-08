@@ -1,6 +1,9 @@
 <?php get_header( ); ?>
 <section class="container">
 	<div id="articles" class="row">
+		<div class="cover">
+			<img src="<?php echo get_template_directory_uri() . '/screenshot.jpg' ?>" alt="Imagen principal">
+		</div>
 		<?php
 		//**********Comienza el bucle**********
 		if ( have_posts() ) : while ( have_posts() ) : the_post();
