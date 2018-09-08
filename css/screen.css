@@ -1,0 +1,91 @@
+/*Contenedor de los ítems*/
+.article-item{
+  word-wrap: break-word;
+}
+/*Paginación*/
+.navigation.pagination{
+	display: block;
+	text-align: center;
+	margin-bottom: 2.5rem;
+}
+.pagination .nav-links{
+	width: 100%;
+}
+
+
+/*================CSS Infinite Scroll================*/
+
+/*Animaciones @keyframes*/
+@keyframes reveal {
+  from { transform: scale(0.001); }
+  to { transform: scale(1); }
+}
+
+@keyframes slide {
+  to { transform: translateX(1.5em) }
+}
+
+/*Contenedor de los mensaje de los diferentes estados*/
+.page-load-status {
+  margin: 2.5rem 0;
+}
+
+/*Animación cargando*/
+.loader-ellips {
+  font-size: 20px;
+  position: relative;
+  width: 4em;
+  height: 1em;
+  margin: 10px auto;
+}
+
+.loader-ellips__dot {
+  position: absolute;
+  display: block;
+  width: 1em;
+  height: 1em;
+  -webkit-animation-duration: .5s;
+  animation-duration: .5s;
+  -webkit-animation-timing-function: ease;
+  animation-timing-function: ease;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  border-radius: .5em;
+  background: #dd1c2a;
+}
+
+.loader-ellips__dot:nth-child(1) {
+  -webkit-animation-name: reveal;
+  animation-name: reveal;
+}
+
+.loader-ellips__dot:nth-child(1),
+.loader-ellips__dot:nth-child(2) {
+  left: 0;
+}
+
+.loader-ellips__dot:nth-child(2),
+.loader-ellips__dot:nth-child(3) {
+  -webkit-animation-name: slide;
+  animation-name: slide;
+}
+
+.loader-ellips__dot:nth-child(3) {
+  left: 1.5em;
+}
+
+.loader-ellips__dot:nth-child(4) {
+  left: 3em;
+  -webkit-animation-name: reveal;
+  animation-name: reveal;
+  animation-direction: reverse;
+}
+/*Fin de la animación cargando*/
+
+/*Mensaje de fin del contenido y no posts*/
+.infinite-scroll-last,
+.message-error{
+  background: #EA3B8D;
+  color: #fff;
+  font-size: 2.5rem;
+}
