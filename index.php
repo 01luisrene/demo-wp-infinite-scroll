@@ -21,6 +21,7 @@
 	<div class="row justify-content-md-center">
 		<div class="col-8">
 			<?php
+				//Paginación
 				the_posts_pagination( array(
 			 	 	'screen_reader_text' 					=> 'Navegación de entradas',
 					'prev_text'										=> '&laquo;',

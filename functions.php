@@ -27,7 +27,7 @@ function add_css_js(){
 	*/
 
 	if ( is_home() ):
-	wp_enqueue_script( 'infinite_scroll' );
+		wp_enqueue_script( 'infinite_scroll' );
 	endif;
 }
 add_action('wp_enqueue_scripts', 'add_css_js');
